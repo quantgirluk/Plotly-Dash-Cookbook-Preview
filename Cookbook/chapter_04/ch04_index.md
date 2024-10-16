@@ -1,8 +1,8 @@
 # Chapter 3 Index
 
-- Creating Histograms
-- Creating a 2D Histogram
-- Creating Box Plots
+- Making Histograms
+- Making 2D-Histograms
+- Making Box Plots
 - Making Box Plots better using Jitter
 - Using Violin Plots as an alternative to Box Plots
 - Understanding marginal plots
