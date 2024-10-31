@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -215,6 +215,24 @@
 <li class="toctree-l2"><a class="reference internal" href="../chapter_03/ch03_recipe08.html">24. Making Gantt Charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_03/ch03_recipe09.html">25. Making Stacked Bars</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_03/ch03_recipe10.html">26. Making Area Charts</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter 4. Recipes for Statistical Charts</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter_04/ch04_intro.html">Recipes for Statistical Charts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_04/ch04_recipe01.html">27. Making Histograms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_04/ch04_recipe02.html">28. Making 2D-Histograms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_04/ch04_recipe03.html">29. Making Box Plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_04/ch04_recipe04.html">30. Making Box Plots better with Jitter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_04/ch04_recipe05.html">31. Using Violin Plots as an alternative to Box Plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_04/ch04_recipe06.html">32. Understanding marginal plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_04/ch04_recipe07.html">33. Making histograms better with marginals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_04/ch04_recipe08.html">34. Using marginal plots with facets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_04/ch04_recipe09.html">35. Understanding ECDF charts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_04/ch04_recipe10.html">36. Visualizing Linear Regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_04/ch04_recipe11.html">37. Visualizing Moving Averages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_04/ch04_recipe12.html">38. Visualizing Correlation Matrices</a></li>
 </ul>
 </details></li>
 </ul>
@@ -481,33 +499,33 @@ document.write(`
   <tbody>
     <tr>
       <th>2020-01-01</th>
-      <td>-3.126111</td>
-      <td>-2.119519</td>
-      <td>-0.720526</td>
+      <td>0.176784</td>
+      <td>0.806264</td>
+      <td>0.535049</td>
     </tr>
     <tr>
       <th>2020-01-02</th>
-      <td>-0.670644</td>
-      <td>0.717301</td>
-      <td>0.180398</td>
+      <td>-1.410101</td>
+      <td>0.237593</td>
+      <td>0.358896</td>
     </tr>
     <tr>
       <th>2020-01-03</th>
-      <td>-0.649778</td>
-      <td>0.101447</td>
-      <td>-0.976383</td>
+      <td>-2.259407</td>
+      <td>-0.896065</td>
+      <td>-0.027396</td>
     </tr>
     <tr>
       <th>2020-01-04</th>
-      <td>0.501419</td>
-      <td>-0.831454</td>
-      <td>-0.690992</td>
+      <td>0.425131</td>
+      <td>0.366601</td>
+      <td>-0.920752</td>
     </tr>
     <tr>
       <th>2020-01-05</th>
-      <td>0.970729</td>
-      <td>2.619269</td>
-      <td>-1.355118</td>
+      <td>0.649811</td>
+      <td>-0.559867</td>
+      <td>-1.609621</td>
     </tr>
   </tbody>
 </table>
@@ -577,83 +595,83 @@ document.write(`
   <tbody>
     <tr>
       <th>2020-01-01</th>
-      <td>-3.126111</td>
-      <td>-2.119519</td>
-      <td>-0.720526</td>
-      <td>9.772570</td>
-      <td>-0.999880</td>
-      <td>-5.245630</td>
-      <td>6.625852</td>
+      <td>0.176784</td>
+      <td>0.806264</td>
+      <td>0.535049</td>
+      <td>0.031253</td>
+      <td>0.984414</td>
+      <td>0.983048</td>
+      <td>0.142535</td>
     </tr>
     <tr>
       <th>2020-01-02</th>
-      <td>-0.670644</td>
-      <td>0.717301</td>
-      <td>0.180398</td>
-      <td>0.449764</td>
-      <td>0.783421</td>
-      <td>0.046657</td>
-      <td>-0.481054</td>
+      <td>-1.410101</td>
+      <td>0.237593</td>
+      <td>0.358896</td>
+      <td>1.988385</td>
+      <td>0.160004</td>
+      <td>-1.172509</td>
+      <td>-0.335030</td>
     </tr>
     <tr>
       <th>2020-01-03</th>
-      <td>-0.649778</td>
-      <td>0.101447</td>
-      <td>-0.976383</td>
-      <td>0.422212</td>
-      <td>0.796218</td>
-      <td>-0.548332</td>
-      <td>-0.065918</td>
+      <td>-2.259407</td>
+      <td>-0.896065</td>
+      <td>-0.027396</td>
+      <td>5.104919</td>
+      <td>-0.635465</td>
+      <td>-3.155471</td>
+      <td>2.024574</td>
     </tr>
     <tr>
       <th>2020-01-04</th>
-      <td>0.501419</td>
-      <td>-0.831454</td>
-      <td>-0.690992</td>
-      <td>0.251421</td>
-      <td>0.876901</td>
-      <td>-0.330035</td>
-      <td>-0.416907</td>
+      <td>0.425131</td>
+      <td>0.366601</td>
+      <td>-0.920752</td>
+      <td>0.180737</td>
+      <td>0.910985</td>
+      <td>0.791732</td>
+      <td>0.155854</td>
     </tr>
     <tr>
       <th>2020-01-05</th>
-      <td>0.970729</td>
-      <td>2.619269</td>
-      <td>-1.355118</td>
-      <td>0.942315</td>
-      <td>0.564698</td>
-      <td>3.589998</td>
-      <td>2.542600</td>
+      <td>0.649811</td>
+      <td>-0.559867</td>
+      <td>-1.609621</td>
+      <td>0.422255</td>
+      <td>0.796198</td>
+      <td>0.089945</td>
+      <td>-0.363808</td>
     </tr>
     <tr>
       <th>2020-01-06</th>
-      <td>0.369302</td>
-      <td>-2.486307</td>
-      <td>-1.097711</td>
-      <td>0.136384</td>
-      <td>0.932579</td>
-      <td>-2.117004</td>
-      <td>-0.918199</td>
+      <td>1.526837</td>
+      <td>-0.389002</td>
+      <td>0.075524</td>
+      <td>2.331231</td>
+      <td>0.043945</td>
+      <td>1.137835</td>
+      <td>-0.593942</td>
     </tr>
     <tr>
       <th>2020-01-07</th>
-      <td>0.245776</td>
-      <td>0.852828</td>
-      <td>-0.101029</td>
-      <td>0.060406</td>
-      <td>0.969949</td>
-      <td>1.098604</td>
-      <td>0.209605</td>
+      <td>0.775667</td>
+      <td>-2.388855</td>
+      <td>0.765557</td>
+      <td>0.601659</td>
+      <td>0.713954</td>
+      <td>-1.613188</td>
+      <td>-1.852955</td>
     </tr>
     <tr>
       <th>2020-01-08</th>
-      <td>1.560390</td>
-      <td>0.832214</td>
-      <td>-0.595868</td>
-      <td>2.434817</td>
-      <td>0.010406</td>
-      <td>2.392604</td>
-      <td>1.298579</td>
+      <td>0.718076</td>
+      <td>-0.048931</td>
+      <td>2.552817</td>
+      <td>0.515633</td>
+      <td>0.753073</td>
+      <td>0.669145</td>
+      <td>-0.035136</td>
     </tr>
   </tbody>
 </table>
@@ -717,91 +735,91 @@ document.write(`
   <tbody>
     <tr>
       <th>2020-01-01</th>
-      <td>-3.126111</td>
-      <td>-2.119519</td>
-      <td>-0.720526</td>
-      <td>9.772570</td>
-      <td>-0.999880</td>
-      <td>-5.245630</td>
-      <td>6.625852</td>
-      <td>-0.770019</td>
+      <td>0.176784</td>
+      <td>0.806264</td>
+      <td>0.535049</td>
+      <td>0.031253</td>
+      <td>0.984414</td>
+      <td>0.983048</td>
+      <td>0.142535</td>
+      <td>2.536858</td>
     </tr>
     <tr>
       <th>2020-01-02</th>
-      <td>-0.670644</td>
-      <td>0.717301</td>
-      <td>0.180398</td>
-      <td>0.449764</td>
-      <td>0.783421</td>
-      <td>0.046657</td>
-      <td>-0.481054</td>
-      <td>2.520776</td>
+      <td>-1.410101</td>
+      <td>0.237593</td>
+      <td>0.358896</td>
+      <td>1.988385</td>
+      <td>0.160004</td>
+      <td>-1.172509</td>
+      <td>-0.335030</td>
+      <td>2.068197</td>
     </tr>
     <tr>
       <th>2020-01-03</th>
-      <td>-0.649778</td>
-      <td>0.101447</td>
-      <td>-0.976383</td>
-      <td>0.422212</td>
-      <td>0.796218</td>
-      <td>-0.548332</td>
-      <td>-0.065918</td>
-      <td>2.351100</td>
+      <td>-2.259407</td>
+      <td>-0.896065</td>
+      <td>-0.027396</td>
+      <td>5.104919</td>
+      <td>-0.635465</td>
+      <td>-3.155471</td>
+      <td>2.024574</td>
+      <td>0.988848</td>
     </tr>
     <tr>
       <th>2020-01-04</th>
-      <td>0.501419</td>
-      <td>-0.831454</td>
-      <td>-0.690992</td>
-      <td>0.251421</td>
-      <td>0.876901</td>
-      <td>-0.330035</td>
-      <td>-0.416907</td>
-      <td>2.321318</td>
+      <td>0.425131</td>
+      <td>0.366601</td>
+      <td>-0.920752</td>
+      <td>0.180737</td>
+      <td>0.910985</td>
+      <td>0.791732</td>
+      <td>0.155854</td>
+      <td>2.449757</td>
     </tr>
     <tr>
       <th>2020-01-05</th>
-      <td>0.970729</td>
-      <td>2.619269</td>
-      <td>-1.355118</td>
-      <td>0.942315</td>
-      <td>0.564698</td>
-      <td>3.589998</td>
-      <td>2.542600</td>
-      <td>0.347362</td>
+      <td>0.649811</td>
+      <td>-0.559867</td>
+      <td>-1.609621</td>
+      <td>0.422255</td>
+      <td>0.796198</td>
+      <td>0.089945</td>
+      <td>-0.363808</td>
+      <td>1.604709</td>
     </tr>
     <tr>
       <th>2020-01-06</th>
-      <td>0.369302</td>
-      <td>-2.486307</td>
-      <td>-1.097711</td>
-      <td>0.136384</td>
-      <td>0.932579</td>
-      <td>-2.117004</td>
-      <td>-0.918199</td>
-      <td>0.595341</td>
+      <td>1.526837</td>
+      <td>-0.389002</td>
+      <td>0.075524</td>
+      <td>2.331231</td>
+      <td>0.043945</td>
+      <td>1.137835</td>
+      <td>-0.593942</td>
+      <td>1.966383</td>
     </tr>
     <tr>
       <th>2020-01-07</th>
-      <td>0.245776</td>
-      <td>0.852828</td>
-      <td>-0.101029</td>
-      <td>0.060406</td>
-      <td>0.969949</td>
-      <td>1.098604</td>
-      <td>0.209605</td>
-      <td>2.622706</td>
+      <td>0.775667</td>
+      <td>-2.388855</td>
+      <td>0.765557</td>
+      <td>0.601659</td>
+      <td>0.713954</td>
+      <td>-1.613188</td>
+      <td>-1.852955</td>
+      <td>0.705131</td>
     </tr>
     <tr>
       <th>2020-01-08</th>
-      <td>1.560390</td>
-      <td>0.832214</td>
-      <td>-0.595868</td>
-      <td>2.434817</td>
-      <td>0.010406</td>
-      <td>2.392604</td>
-      <td>1.298579</td>
-      <td>1.511308</td>
+      <td>0.718076</td>
+      <td>-0.048931</td>
+      <td>2.552817</td>
+      <td>0.515633</td>
+      <td>0.753073</td>
+      <td>0.669145</td>
+      <td>-0.035136</td>
+      <td>0.920255</td>
     </tr>
   </tbody>
 </table>
@@ -865,98 +883,98 @@ For example, we are going to map column <code class="docutils literal notranslat
   <tbody>
     <tr>
       <th>2020-01-01</th>
-      <td>-3.126111</td>
-      <td>-2.119519</td>
-      <td>-0.720526</td>
-      <td>9.772570</td>
-      <td>-0.999880</td>
-      <td>-5.245630</td>
-      <td>6.625852</td>
-      <td>-0.770019</td>
+      <td>0.176784</td>
+      <td>0.806264</td>
+      <td>0.535049</td>
+      <td>0.031253</td>
+      <td>0.984414</td>
+      <td>0.983048</td>
+      <td>0.142535</td>
+      <td>2.536858</td>
       <td>yellow</td>
     </tr>
     <tr>
       <th>2020-01-02</th>
-      <td>-0.670644</td>
-      <td>0.717301</td>
-      <td>0.180398</td>
-      <td>0.449764</td>
-      <td>0.783421</td>
-      <td>0.046657</td>
-      <td>-0.481054</td>
-      <td>2.520776</td>
+      <td>-1.410101</td>
+      <td>0.237593</td>
+      <td>0.358896</td>
+      <td>1.988385</td>
+      <td>0.160004</td>
+      <td>-1.172509</td>
+      <td>-0.335030</td>
+      <td>2.068197</td>
       <td>yellow</td>
     </tr>
     <tr>
       <th>2020-01-03</th>
-      <td>-0.649778</td>
-      <td>0.101447</td>
-      <td>-0.976383</td>
-      <td>0.422212</td>
-      <td>0.796218</td>
-      <td>-0.548332</td>
-      <td>-0.065918</td>
-      <td>2.351100</td>
+      <td>-2.259407</td>
+      <td>-0.896065</td>
+      <td>-0.027396</td>
+      <td>5.104919</td>
+      <td>-0.635465</td>
+      <td>-3.155471</td>
+      <td>2.024574</td>
+      <td>0.988848</td>
       <td>yellow</td>
     </tr>
     <tr>
       <th>2020-01-04</th>
-      <td>0.501419</td>
-      <td>-0.831454</td>
-      <td>-0.690992</td>
-      <td>0.251421</td>
-      <td>0.876901</td>
-      <td>-0.330035</td>
-      <td>-0.416907</td>
-      <td>2.321318</td>
+      <td>0.425131</td>
+      <td>0.366601</td>
+      <td>-0.920752</td>
+      <td>0.180737</td>
+      <td>0.910985</td>
+      <td>0.791732</td>
+      <td>0.155854</td>
+      <td>2.449757</td>
       <td>yellow</td>
     </tr>
     <tr>
       <th>2020-01-05</th>
-      <td>0.970729</td>
-      <td>2.619269</td>
-      <td>-1.355118</td>
-      <td>0.942315</td>
-      <td>0.564698</td>
-      <td>3.589998</td>
-      <td>2.542600</td>
-      <td>0.347362</td>
+      <td>0.649811</td>
+      <td>-0.559867</td>
+      <td>-1.609621</td>
+      <td>0.422255</td>
+      <td>0.796198</td>
+      <td>0.089945</td>
+      <td>-0.363808</td>
+      <td>1.604709</td>
       <td>yellow</td>
     </tr>
     <tr>
       <th>2020-01-06</th>
-      <td>0.369302</td>
-      <td>-2.486307</td>
-      <td>-1.097711</td>
-      <td>0.136384</td>
-      <td>0.932579</td>
-      <td>-2.117004</td>
-      <td>-0.918199</td>
-      <td>0.595341</td>
+      <td>1.526837</td>
+      <td>-0.389002</td>
+      <td>0.075524</td>
+      <td>2.331231</td>
+      <td>0.043945</td>
+      <td>1.137835</td>
+      <td>-0.593942</td>
+      <td>1.966383</td>
       <td>yellow</td>
     </tr>
     <tr>
       <th>2020-01-07</th>
-      <td>0.245776</td>
-      <td>0.852828</td>
-      <td>-0.101029</td>
-      <td>0.060406</td>
-      <td>0.969949</td>
-      <td>1.098604</td>
-      <td>0.209605</td>
-      <td>2.622706</td>
+      <td>0.775667</td>
+      <td>-2.388855</td>
+      <td>0.765557</td>
+      <td>0.601659</td>
+      <td>0.713954</td>
+      <td>-1.613188</td>
+      <td>-1.852955</td>
+      <td>0.705131</td>
       <td>yellow</td>
     </tr>
     <tr>
       <th>2020-01-08</th>
-      <td>1.560390</td>
-      <td>0.832214</td>
-      <td>-0.595868</td>
-      <td>2.434817</td>
-      <td>0.010406</td>
-      <td>2.392604</td>
-      <td>1.298579</td>
-      <td>1.511308</td>
+      <td>0.718076</td>
+      <td>-0.048931</td>
+      <td>2.552817</td>
+      <td>0.515633</td>
+      <td>0.753073</td>
+      <td>0.669145</td>
+      <td>-0.035136</td>
+      <td>0.920255</td>
       <td>yellow</td>
     </tr>
   </tbody>
@@ -1010,105 +1028,105 @@ For example, we are going to map column <code class="docutils literal notranslat
   <tbody>
     <tr>
       <th>2020-01-01</th>
-      <td>-3.126111</td>
-      <td>-2.119519</td>
-      <td>-0.720526</td>
-      <td>9.772570</td>
-      <td>-0.999880</td>
-      <td>-5.245630</td>
-      <td>6.625852</td>
-      <td>-0.770019</td>
+      <td>0.176784</td>
+      <td>0.806264</td>
+      <td>0.535049</td>
+      <td>0.031253</td>
+      <td>0.984414</td>
+      <td>0.983048</td>
+      <td>0.142535</td>
+      <td>2.536858</td>
       <td>yellow</td>
-      <td>False</td>
+      <td>True</td>
     </tr>
     <tr>
       <th>2020-01-02</th>
-      <td>-0.670644</td>
-      <td>0.717301</td>
-      <td>0.180398</td>
-      <td>0.449764</td>
-      <td>0.783421</td>
-      <td>0.046657</td>
-      <td>-0.481054</td>
-      <td>2.520776</td>
+      <td>-1.410101</td>
+      <td>0.237593</td>
+      <td>0.358896</td>
+      <td>1.988385</td>
+      <td>0.160004</td>
+      <td>-1.172509</td>
+      <td>-0.335030</td>
+      <td>2.068197</td>
       <td>yellow</td>
       <td>False</td>
     </tr>
     <tr>
       <th>2020-01-03</th>
-      <td>-0.649778</td>
-      <td>0.101447</td>
-      <td>-0.976383</td>
-      <td>0.422212</td>
-      <td>0.796218</td>
-      <td>-0.548332</td>
-      <td>-0.065918</td>
-      <td>2.351100</td>
+      <td>-2.259407</td>
+      <td>-0.896065</td>
+      <td>-0.027396</td>
+      <td>5.104919</td>
+      <td>-0.635465</td>
+      <td>-3.155471</td>
+      <td>2.024574</td>
+      <td>0.988848</td>
       <td>yellow</td>
       <td>False</td>
     </tr>
     <tr>
       <th>2020-01-04</th>
-      <td>0.501419</td>
-      <td>-0.831454</td>
-      <td>-0.690992</td>
-      <td>0.251421</td>
-      <td>0.876901</td>
-      <td>-0.330035</td>
-      <td>-0.416907</td>
-      <td>2.321318</td>
+      <td>0.425131</td>
+      <td>0.366601</td>
+      <td>-0.920752</td>
+      <td>0.180737</td>
+      <td>0.910985</td>
+      <td>0.791732</td>
+      <td>0.155854</td>
+      <td>2.449757</td>
       <td>yellow</td>
       <td>True</td>
     </tr>
     <tr>
       <th>2020-01-05</th>
-      <td>0.970729</td>
-      <td>2.619269</td>
-      <td>-1.355118</td>
-      <td>0.942315</td>
-      <td>0.564698</td>
-      <td>3.589998</td>
-      <td>2.542600</td>
-      <td>0.347362</td>
+      <td>0.649811</td>
+      <td>-0.559867</td>
+      <td>-1.609621</td>
+      <td>0.422255</td>
+      <td>0.796198</td>
+      <td>0.089945</td>
+      <td>-0.363808</td>
+      <td>1.604709</td>
       <td>yellow</td>
       <td>True</td>
     </tr>
     <tr>
       <th>2020-01-06</th>
-      <td>0.369302</td>
-      <td>-2.486307</td>
-      <td>-1.097711</td>
-      <td>0.136384</td>
-      <td>0.932579</td>
-      <td>-2.117004</td>
-      <td>-0.918199</td>
-      <td>0.595341</td>
+      <td>1.526837</td>
+      <td>-0.389002</td>
+      <td>0.075524</td>
+      <td>2.331231</td>
+      <td>0.043945</td>
+      <td>1.137835</td>
+      <td>-0.593942</td>
+      <td>1.966383</td>
       <td>yellow</td>
       <td>True</td>
     </tr>
     <tr>
       <th>2020-01-07</th>
-      <td>0.245776</td>
-      <td>0.852828</td>
-      <td>-0.101029</td>
-      <td>0.060406</td>
-      <td>0.969949</td>
-      <td>1.098604</td>
-      <td>0.209605</td>
-      <td>2.622706</td>
+      <td>0.775667</td>
+      <td>-2.388855</td>
+      <td>0.765557</td>
+      <td>0.601659</td>
+      <td>0.713954</td>
+      <td>-1.613188</td>
+      <td>-1.852955</td>
+      <td>0.705131</td>
       <td>yellow</td>
       <td>True</td>
     </tr>
     <tr>
       <th>2020-01-08</th>
-      <td>1.560390</td>
-      <td>0.832214</td>
-      <td>-0.595868</td>
-      <td>2.434817</td>
-      <td>0.010406</td>
-      <td>2.392604</td>
-      <td>1.298579</td>
-      <td>1.511308</td>
+      <td>0.718076</td>
+      <td>-0.048931</td>
+      <td>2.552817</td>
+      <td>0.515633</td>
+      <td>0.753073</td>
+      <td>0.669145</td>
+      <td>-0.035136</td>
+      <td>0.920255</td>
       <td>yellow</td>
       <td>True</td>
     </tr>
@@ -1164,112 +1182,112 @@ For example, we are going to map column <code class="docutils literal notranslat
   <tbody>
     <tr>
       <th>2020-01-01</th>
-      <td>-3.126111</td>
-      <td>-2.119519</td>
-      <td>-0.720526</td>
-      <td>9.772570</td>
-      <td>-0.999880</td>
-      <td>-5.245630</td>
-      <td>6.625852</td>
-      <td>-0.770019</td>
+      <td>0.176784</td>
+      <td>0.806264</td>
+      <td>0.535049</td>
+      <td>0.031253</td>
+      <td>0.984414</td>
+      <td>0.983048</td>
+      <td>0.142535</td>
+      <td>2.536858</td>
       <td>yellow</td>
-      <td>False</td>
-      <td>red</td>
+      <td>True</td>
+      <td>green</td>
     </tr>
     <tr>
       <th>2020-01-02</th>
-      <td>-0.670644</td>
-      <td>0.717301</td>
-      <td>0.180398</td>
-      <td>0.449764</td>
-      <td>0.783421</td>
-      <td>0.046657</td>
-      <td>-0.481054</td>
-      <td>2.520776</td>
+      <td>-1.410101</td>
+      <td>0.237593</td>
+      <td>0.358896</td>
+      <td>1.988385</td>
+      <td>0.160004</td>
+      <td>-1.172509</td>
+      <td>-0.335030</td>
+      <td>2.068197</td>
       <td>yellow</td>
       <td>False</td>
       <td>red</td>
     </tr>
     <tr>
       <th>2020-01-03</th>
-      <td>-0.649778</td>
-      <td>0.101447</td>
-      <td>-0.976383</td>
-      <td>0.422212</td>
-      <td>0.796218</td>
-      <td>-0.548332</td>
-      <td>-0.065918</td>
-      <td>2.351100</td>
+      <td>-2.259407</td>
+      <td>-0.896065</td>
+      <td>-0.027396</td>
+      <td>5.104919</td>
+      <td>-0.635465</td>
+      <td>-3.155471</td>
+      <td>2.024574</td>
+      <td>0.988848</td>
       <td>yellow</td>
       <td>False</td>
       <td>red</td>
     </tr>
     <tr>
       <th>2020-01-04</th>
-      <td>0.501419</td>
-      <td>-0.831454</td>
-      <td>-0.690992</td>
-      <td>0.251421</td>
-      <td>0.876901</td>
-      <td>-0.330035</td>
-      <td>-0.416907</td>
-      <td>2.321318</td>
+      <td>0.425131</td>
+      <td>0.366601</td>
+      <td>-0.920752</td>
+      <td>0.180737</td>
+      <td>0.910985</td>
+      <td>0.791732</td>
+      <td>0.155854</td>
+      <td>2.449757</td>
       <td>yellow</td>
       <td>True</td>
       <td>green</td>
     </tr>
     <tr>
       <th>2020-01-05</th>
-      <td>0.970729</td>
-      <td>2.619269</td>
-      <td>-1.355118</td>
-      <td>0.942315</td>
-      <td>0.564698</td>
-      <td>3.589998</td>
-      <td>2.542600</td>
-      <td>0.347362</td>
+      <td>0.649811</td>
+      <td>-0.559867</td>
+      <td>-1.609621</td>
+      <td>0.422255</td>
+      <td>0.796198</td>
+      <td>0.089945</td>
+      <td>-0.363808</td>
+      <td>1.604709</td>
       <td>yellow</td>
       <td>True</td>
       <td>green</td>
     </tr>
     <tr>
       <th>2020-01-06</th>
-      <td>0.369302</td>
-      <td>-2.486307</td>
-      <td>-1.097711</td>
-      <td>0.136384</td>
-      <td>0.932579</td>
-      <td>-2.117004</td>
-      <td>-0.918199</td>
-      <td>0.595341</td>
+      <td>1.526837</td>
+      <td>-0.389002</td>
+      <td>0.075524</td>
+      <td>2.331231</td>
+      <td>0.043945</td>
+      <td>1.137835</td>
+      <td>-0.593942</td>
+      <td>1.966383</td>
       <td>yellow</td>
       <td>True</td>
       <td>green</td>
     </tr>
     <tr>
       <th>2020-01-07</th>
-      <td>0.245776</td>
-      <td>0.852828</td>
-      <td>-0.101029</td>
-      <td>0.060406</td>
-      <td>0.969949</td>
-      <td>1.098604</td>
-      <td>0.209605</td>
-      <td>2.622706</td>
+      <td>0.775667</td>
+      <td>-2.388855</td>
+      <td>0.765557</td>
+      <td>0.601659</td>
+      <td>0.713954</td>
+      <td>-1.613188</td>
+      <td>-1.852955</td>
+      <td>0.705131</td>
       <td>yellow</td>
       <td>True</td>
       <td>green</td>
     </tr>
     <tr>
       <th>2020-01-08</th>
-      <td>1.560390</td>
-      <td>0.832214</td>
-      <td>-0.595868</td>
-      <td>2.434817</td>
-      <td>0.010406</td>
-      <td>2.392604</td>
-      <td>1.298579</td>
-      <td>1.511308</td>
+      <td>0.718076</td>
+      <td>-0.048931</td>
+      <td>2.552817</td>
+      <td>0.515633</td>
+      <td>0.753073</td>
+      <td>0.669145</td>
+      <td>-0.035136</td>
+      <td>0.920255</td>
       <td>yellow</td>
       <td>True</td>
       <td>green</td>
